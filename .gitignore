@@ -1,0 +1,8 @@
+# Secrets
+config.jac
+.env
+# Python/jac env files (optional)
+jac-env/
+*.pyc
+__pycache__/
+.DS_Store
