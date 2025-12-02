@@ -45,7 +45,7 @@ walker MergeWeather {
         # pick max
         best_cond = "";
         best_count = 0;
-        for k,v in cond_counts {
+        for k : v in cond_counts {
             if v > best_count {
                 best_count = v;
                 best_cond = k;
