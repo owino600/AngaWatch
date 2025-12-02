@@ -1,0 +1,5 @@
+{
+  "name": "AngaWatchBackend",
+  "version": "1.0.0",
+  "include_paths": ["."]
+}

@@ -1,14 +1,15 @@
 # main.jac - imports and a small entry walker
-include "weather_raw.jac";
-include "weather_unified.jac";
-include "risk_event.jac";
-include "user.jac";
+include ./weather_raw.jac;
+include ./weather_unified.jac;
+include ./risk_event.jac;
+include ./user.jac;
 
-include "walkers/fetch_weather.jac";
-include "walkers/merge_weather.jac";
-include "walkers/forecast_ai.jac";
-include "walkers/disaster_predictor.jac";
-include "walkers/notify_user.jac";
+include ./walkers/fetch_weather.jac;
+include ./walkers/merge_weather.jac;
+include ./walkers/forecast_ai.jac;
+include ./walkers/disaster_predictor.jac;
+include ./walkers/notify_user.jac;
+
 
 walker Root {
     can start with root entry {
