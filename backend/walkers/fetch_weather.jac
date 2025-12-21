@@ -4,7 +4,7 @@
 # - If you don't have API keys yet, this walker will create mocked data.
 
 walker FetchWeather {
-    can start with root entry {
+    can start with `root entry {
         print("FetchWeather: started");
 
         # --- EXAMPLE 1: mocked data (safe to run immediately) ---

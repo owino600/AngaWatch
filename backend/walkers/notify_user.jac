@@ -4,7 +4,7 @@
 #   actual integration code (Twilio, Africa's Talking, Meta, etc).
 
 walker NotifyUsers {
-    can start with root entry {
+    can start with `root entry {
         print("NotifyUsers: started");
 
         events = [root-->(`?RiskEvent)];

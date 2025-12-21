@@ -2,7 +2,7 @@
 # - Evaluate unified weather and recent history to generate RiskEvent nodes
 
 walker DisasterPredictor {
-    can start with root entry {
+    can start with `root entry {
         print("DisasterPredictor: started");
 
         unifs = [root-->(`?WeatherUnified)];

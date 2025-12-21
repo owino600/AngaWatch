@@ -7,7 +7,7 @@
 # actual byllm call supported by your jac installation.
 
 walker ForecastAI {
-    can start with root entry {
+    can start with `root entry {
         # find the latest unified record (simple approach: pick first)
         unifs = [root-->(`?WeatherUnified)];
         if std.len(unifs) == 0 {

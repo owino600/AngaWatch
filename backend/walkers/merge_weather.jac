@@ -2,7 +2,7 @@
 # - Read all WeatherRaw nodes created recently and produce a WeatherUnified node
 
 walker MergeWeather {
-    can start with root entry {
+    can start with `root entry {
         print("MergeWeather: started");
 
         # collect raw nodes (simple: all WeatherRaw under root)
@@ -42,10 +42,13 @@ walker MergeWeather {
                 cond_counts[cond] = 1;
             }
         }
+
         # pick max
         best_cond = "";
         best_count = 0;
-        for k : v in cond_counts {
+
+        # FIXED LOOP SYNTAX
+        for (k, v) in cond_counts {
             if v > best_count {
                 best_count = v;
                 best_cond = k;
@@ -60,7 +63,7 @@ walker MergeWeather {
         u.precipitation = avg_prec;
         u.wind_speed = avg_wind;
         u.condition = best_cond;
-        u.confidence = std.clip( (best_count / std.len(raws)), 0.0, 1.0 );
+        u.confidence = std.clip((best_count / std.len(raws)), 0.0, 1.0);
         u.updated_at = now;
         u.sources = sources;
 
